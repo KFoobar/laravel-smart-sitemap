@@ -8,7 +8,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Collection;
 use SimpleXMLElement;
 
-class SmartSitemapFactory
+class SitemapFactory
 {
     /**
      * @var Collection

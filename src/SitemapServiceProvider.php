@@ -4,7 +4,7 @@ namespace KFoobar\SmartSitemap;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class SmartSitemapServiceProvider extends BaseServiceProvider
+class SitemapServiceProvider extends BaseServiceProvider
 {
     public function boot()
     {

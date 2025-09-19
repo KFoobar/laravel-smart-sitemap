@@ -25,10 +25,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "KFoobar\\SmartSitemap\\SmartSitemapServiceProvider"
+                "KFoobar\\SmartSitemap\\SitemapServiceProvider"
             ],
             "aliases": {
-                "SmartSitemap": "KFoobar\\SmartSitemap\\Facades\\SmartSitemap"
+                "SmartSitemap": "KFoobar\\SmartSitemap\\Facades\\Sitemap"
             }
         }
     },

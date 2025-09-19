@@ -3,9 +3,9 @@
 namespace KFoobar\SmartSitemap\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use KFoobar\SmartSitemap\Factories\SmartSitemapFactory;
+use KFoobar\SmartSitemap\Factories\SitemapFactory;
 
-class SmartSitemap extends Facade
+class Sitemap extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -14,6 +14,6 @@ class SmartSitemap extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return SmartSitemapFactory::class;
+        return SitemapFactory::class;
     }
 }

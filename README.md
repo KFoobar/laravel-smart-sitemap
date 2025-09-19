@@ -1,4 +1,4 @@
-# Laravel Smart Sitemap Generator
+# Dynamic Sitemap Generator for Laravel
 
 A lightweight Laravel package for generating sitemaps dynamically and on demand.
 
@@ -29,10 +29,10 @@ Note: The `priority` and `changefreq` fields are intentionally excluded, as Goog
 Add URLs and generate the sitemap using the provided facade:
 
 ```php
-use KFoobar\SmartSitemap\Facades\SmartSitemap;
+use KFoobar\SmartSitemap\Facades\Sitemap;
 
-SmartSitemap::add('https://example.com', now());
-SmartSitemap::generate();
+Sitemap::add('https://example.com', now());
+Sitemap::generate();
 ```
 
 ### Using the Factory
@@ -40,9 +40,9 @@ SmartSitemap::generate();
 Alternatively, instantiate the factory directly for more granular control:
 
 ```php
-use KFoobar\SmartSitemap\SmartSitemapFactory;
+use KFoobar\SmartSitemap\SitemapFactory;
 
-(new SmartSitemapFactory)
+(new SitemapFactory)
     ->add('https://example.com')
     ->add('https://example.com/about')
     ->generate();
@@ -64,13 +64,13 @@ Create the controller `app/Http/Controllers/SitemapController.php`:
 namespace App\Http\Controllers;
 
 use App\Models\Content\Post;
-use KFoobar\SmartSitemap\Factories\SmartSitemapFactory;
+use KFoobar\SmartSitemap\Factories\SitemapFactory;
 
 class SitemapController extends Controller
 {
     public function index()
     {
-        $sitemap = new SmartSitemapFactory;
+        $sitemap = new SitemapFactory;
 
         foreach (['home', 'about'] as $route) {
             $sitemap->add(route($route));
